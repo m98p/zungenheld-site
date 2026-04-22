@@ -1,98 +1,197 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Datenschutzerklärung — ZungenHeld</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            color: #1C1C1E;
-            background: #FFFFFF;
-            margin: 0;
-            padding: 0;
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Datenschutz — ZungenHeld</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "inverse-on-surface": "#f3f0f2",
+          "surface-container": "#f0edef",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#001b3f",
+          "on-primary-fixed-variant": "#00458f",
+          "error": "#ba1a1a",
+          "surface-container-highest": "#e4e2e4",
+          "inverse-primary": "#abc7ff",
+          "outline": "#717785",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dcd9dc",
+          "on-surface": "#1b1b1d",
+          "on-tertiary-fixed": "#1a1b1f",
+          "on-secondary-fixed": "#351000",
+          "on-background": "#1b1b1d",
+          "tertiary": "#5a5b5f",
+          "secondary-container": "#ff6a0d",
+          "primary-fixed": "#d7e2ff",
+          "secondary-fixed-dim": "#ffb595",
+          "on-error": "#ffffff",
+          "surface-variant": "#e4e2e4",
+          "surface-container-high": "#eae7ea",
+          "on-tertiary-fixed-variant": "#46464b",
+          "primary-fixed-dim": "#abc7ff",
+          "surface-container-lowest": "#ffffff",
+          "surface": "#fcf8fb",
+          "inverse-surface": "#303032",
+          "on-surface-variant": "#414753",
+          "on-secondary": "#ffffff",
+          "on-primary-container": "#fcfbff",
+          "surface-bright": "#fcf8fb",
+          "secondary-fixed": "#ffdbcc",
+          "tertiary-fixed-dim": "#c7c6cb",
+          "error-container": "#ffdad6",
+          "primary-container": "#0071e3",
+          "on-tertiary": "#ffffff",
+          "surface-container-low": "#f6f3f5",
+          "on-secondary-container": "#581f00",
+          "secondary": "#a23f00",
+          "on-tertiary-container": "#fcfaff",
+          "on-secondary-fixed-variant": "#7c2e00",
+          "background": "#fcf8fb",
+          "surface-tint": "#005cbb",
+          "outline-variant": "#c1c6d6",
+          "primary": "#0059b5",
+          "tertiary-fixed": "#e3e2e7",
+          "tertiary-container": "#737378"
+        },
+        borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" },
+        spacing: {
+          "section-gap": "160px",
+          "margin-page": "5vw",
+          "container-max": "1200px",
+          "element-gap": "24px",
+          "gutter": "32px"
+        },
+        fontFamily: {
+          "hero-display": ["Inter", "sans-serif"],
+          "headline-md": ["Inter", "sans-serif"],
+          "headline-lg": ["Inter", "sans-serif"],
+          "label-pill": ["Inter", "sans-serif"],
+          "body-md": ["Inter", "sans-serif"],
+          "body-lg": ["Inter", "sans-serif"]
+        },
+        fontSize: {
+          "hero-display": ["84px", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "600" }],
+          "headline-lg": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+          "headline-md": ["32px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "label-pill": ["12px", { lineHeight: "1", letterSpacing: "0.02em", fontWeight: "600" }],
+          "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+          "body-lg": ["19px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }]
         }
-        main {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 32px 16px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-        h2 {
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-top: 24px;
-            margin-bottom: 16px;
-            border-left: 3px solid #0A84FF;
-            padding-left: 8px;
-        }
-        p, li {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        small {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #666;
-        }
-        a {
-            color: #0A84FF;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+      }
+    }
+  };
+</script>
+<style>
+  html, body { font-family: 'Inter', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .prose-legal h2 { font-size: 32px; line-height: 1.3; letter-spacing: -0.01em; font-weight: 600; color: #1b1b1d; margin-top: 48px; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #0071e3; }
+  .prose-legal h2:first-of-type { margin-top: 0; }
+  .prose-legal p { font-size: 19px; line-height: 1.6; color: #414753; margin-bottom: 16px; }
+  .prose-legal ul { font-size: 19px; line-height: 1.7; color: #414753; margin: 16px 0 24px 0; padding-left: 0; list-style: none; }
+  .prose-legal ul li { position: relative; padding-left: 32px; margin-bottom: 12px; }
+  .prose-legal ul li::before { content: ""; position: absolute; left: 0; top: 14px; width: 16px; height: 2px; background: #0071e3; border-radius: 2px; }
+  .prose-legal strong { color: #1b1b1d; font-weight: 600; }
+  .prose-legal a { color: #0059b5; text-decoration: none; border-bottom: 1px solid #0059b580; transition: border-color 0.2s; }
+  .prose-legal a:hover { border-bottom-color: #0059b5; }
+</style>
 </head>
-<body>
-<main>
-    <h1>Datenschutzerklärung</h1>
-    <p><small>Stand: April 2026</small></p>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
 
-    <h2>1. Einleitung</h2>
-    <p>ZungenHeld ist eine iOS-App für Kinder zwischen 8 und 14 Jahren, die logopädische Zungenübungen als Spiel verpackt. Die App verwendet ARKit Face Tracking über die TrueDepth-Frontkamera, um Zungenbewegungen in Echtzeit zu erkennen. Alle Verarbeitung erfolgt ausschließlich lokal auf dem Gerät. Es werden keine Kameradaten gespeichert, übertragen oder an Dritte weitergegeben.</p>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-7xl mx-auto bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl font-sans antialiased tracking-tight backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 shadow-[0_4px_30px_rgba(0,113,227,0.04)]">
+  <a href="index.html" class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white hover:opacity-80 transition-opacity">
+    ZungenHeld&nbsp;<span style="font-size: 1.25rem; letter-spacing: -0.05em;">by Sagenhaft Logopädie</span>
+  </a>
+  <div class="hidden md:flex items-center gap-element-gap">
+    <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="index.html#features">Features</a>
+    <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="index.html#methodology">Methodology</a>
+    <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="index.html#for-parents">For Parents</a>
+    <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="support.html">Support</a>
+  </div>
+  <div class="flex items-center">
+    <a class="bg-primary text-on-primary font-body-md text-body-md px-6 py-3 rounded-full hover:opacity-80 transition-all duration-300 inline-block" href="https://testflight.apple.com/join/9AhV16fM" target="_blank" rel="noopener">Get Started</a>
+  </div>
+</nav>
 
-    <h2>2. Verantwortlicher</h2>
-    <p>
-        Marvin Pfeifer<br>
-        E-Mail: app@sagenhaftlogo.de
+<main class="w-full">
+  <!-- Hero -->
+  <section class="pt-40 pb-16 px-margin-page flex flex-col items-center text-center max-w-container-max mx-auto">
+    <a href="index.html" class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full mb-8 hover:bg-surface-container-highest transition-colors">
+      <span class="material-symbols-outlined text-sm text-tertiary">arrow_back</span>
+      <span class="font-label-pill text-label-pill text-on-surface-variant uppercase">Zurück zur Startseite</span>
+    </a>
+    <h1 class="font-headline-lg md:text-hero-display text-headline-lg text-on-background max-w-4xl mb-6 tracking-tight">
+      Datenschutz
+    </h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+      Stand: April 2026 · Alle Verarbeitung findet lokal auf dem Gerät statt.
     </p>
+  </section>
 
-    <h2>3. Verarbeitete Daten</h2>
-    <p>ZungenHeld verarbeitet Kamerabilder ausschließlich in Echtzeit zur Erkennung von Zungenbewegungen über ARKit Face Tracking Blend Shapes. Die Bilddaten existieren nur vorübergehend im Arbeitsspeicher (RAM) während der aktiven Nutzung der App. Es findet keine persistente Speicherung der Kamerabilder oder Gesichtsdaten statt. Es werden keine Aufnahmen erstellt, keine Screenshots gespeichert und keine Daten übertragen oder hochgeladen.</p>
-    <p>Lokal auf dem Gerät gespeichert werden ausschließlich spielbezogene Daten: Profilname, Spielfortschritt und Punktestand. Diese Daten werden über UserDefaults und SwiftData auf dem Gerät gespeichert und verlassen das Gerät zu keinem Zeitpunkt.</p>
+  <!-- Content Card -->
+  <section class="px-margin-page pb-section-gap max-w-container-max mx-auto">
+    <article class="prose-legal bg-surface-container-lowest rounded-lg md:rounded-xl p-8 md:p-16 mx-auto max-w-4xl shadow-[0_20px_50px_rgba(0,113,227,0.06)] border border-outline-variant/30">
 
-    <h2>4. Rechtsgrundlage</h2>
-    <p>Die Verarbeitung der Kameradaten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Die Kameranutzung ist die Kernfunktion der App — ohne die Echtzeit-Erkennung von Zungenbewegungen kann der Dienst nicht erbracht werden. Die Kamerazugriff-Anfrage des iOS-Systems dient als Kontrollmechanismus für den Nutzer.</p>
+      <h2>1. Einleitung</h2>
+      <p>ZungenHeld ist eine iOS-App für Kinder zwischen 8 und 14 Jahren, die logopädische Zungenübungen als Spiel verpackt. Die App verwendet ARKit Face Tracking über die TrueDepth-Frontkamera, um Zungenbewegungen in Echtzeit zu erkennen. Alle Verarbeitung erfolgt ausschließlich lokal auf dem Gerät. Es werden keine Kameradaten gespeichert, übertragen oder an Dritte weitergegeben.</p>
 
-    <h2>5. Aufbewahrungsfristen</h2>
-    <p>Kamera- und Gesichtsdaten werden ausschließlich im Arbeitsspeicher (RAM) verarbeitet und unmittelbar nach Ende der Spielrunde oder beim Schließen der App gelöscht. Es findet keine dauerhafte Speicherung dieser Daten statt.</p>
-    <p>Spielbezogene Daten (Profilname, Spielfortschritt, Punkte) werden lokal auf dem Gerät gespeichert und können durch das Löschen der App vollständig entfernt werden.</p>
+      <h2>2. Verantwortlicher</h2>
+      <p>Marvin Pfeifer<br>E-Mail: <a href="mailto:app@sagenhaftlogo.de">app@sagenhaftlogo.de</a></p>
 
-    <h2>6. Nutzung durch Kinder</h2>
-    <p>ZungenHeld richtet sich an Kinder zwischen 8 und 14 Jahren. Die App erfasst, speichert oder überträgt keine personenbezogenen Daten. Die Kamera wird ausschließlich zur Echtzeit-Erkennung von Zungenbewegungen verwendet. Alle Verarbeitung erfolgt lokal auf dem Gerät. Eltern können sich jederzeit per E-Mail an uns wenden.</p>
+      <h2>3. Verarbeitete Daten</h2>
+      <p>ZungenHeld verarbeitet Kamerabilder ausschließlich in Echtzeit zur Erkennung von Zungenbewegungen über ARKit Face Tracking Blend Shapes. Die Bilddaten existieren nur vorübergehend im Arbeitsspeicher (RAM) während der aktiven Nutzung der App. Es findet keine persistente Speicherung der Kamerabilder oder Gesichtsdaten statt. Es werden keine Aufnahmen erstellt, keine Screenshots gespeichert und keine Daten übertragen oder hochgeladen.</p>
+      <p>Lokal auf dem Gerät gespeichert werden ausschließlich spielbezogene Daten: Profilname, Spielfortschritt und Punktestand. Diese Daten werden über UserDefaults und SwiftData auf dem Gerät gespeichert und verlassen das Gerät zu keinem Zeitpunkt.</p>
 
-    <h2>7. Rechte der betroffenen Personen</h2>
-    <p>Nach der DSGVO stehen betroffenen Personen folgende Rechte zu. Da ZungenHeld keine personenbezogenen Daten speichert oder überträgt, sind diese Rechte in der Praxis weitgehend gegenstandslos — sie werden jedoch der Vollständigkeit halber aufgeführt:</p>
-    <ul>
+      <h2>4. Rechtsgrundlage</h2>
+      <p>Die Verarbeitung der Kameradaten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Die Kameranutzung ist die Kernfunktion der App — ohne die Echtzeit-Erkennung von Zungenbewegungen kann der Dienst nicht erbracht werden. Die Kamerazugriff-Anfrage des iOS-Systems dient als Kontrollmechanismus für den Nutzer.</p>
+
+      <h2>5. Aufbewahrungsfristen</h2>
+      <p>Kamera- und Gesichtsdaten werden ausschließlich im Arbeitsspeicher (RAM) verarbeitet und unmittelbar nach Ende der Spielrunde oder beim Schließen der App gelöscht. Es findet keine dauerhafte Speicherung dieser Daten statt.</p>
+      <p>Spielbezogene Daten (Profilname, Spielfortschritt, Punkte) werden lokal auf dem Gerät gespeichert und können durch das Löschen der App vollständig entfernt werden.</p>
+
+      <h2>6. Nutzung durch Kinder</h2>
+      <p>ZungenHeld richtet sich an Kinder zwischen 8 und 14 Jahren. Die App erfasst, speichert oder überträgt keine personenbezogenen Daten. Die Kamera wird ausschließlich zur Echtzeit-Erkennung von Zungenbewegungen verwendet. Alle Verarbeitung erfolgt lokal auf dem Gerät. Eltern können sich jederzeit per E-Mail an uns wenden.</p>
+
+      <h2>7. Rechte der betroffenen Personen</h2>
+      <p>Nach der DSGVO stehen betroffenen Personen folgende Rechte zu. Da ZungenHeld keine personenbezogenen Daten speichert oder überträgt, sind diese Rechte in der Praxis weitgehend gegenstandslos — sie werden jedoch der Vollständigkeit halber aufgeführt:</p>
+      <ul>
         <li><strong>Recht auf Auskunft</strong> (Art. 15 DSGVO): Sie können Auskunft über die zu Ihrer Person gespeicherten Daten verlangen.</li>
         <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO): Sie können die Berichtigung unrichtiger Daten verlangen.</li>
         <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO): Sie können die Löschung Ihrer Daten verlangen. Lokal gespeicherte Spielfortschrittsdaten können jederzeit durch Löschen der App entfernt werden.</li>
         <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO): Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</li>
         <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO): Sie haben das Recht, Ihre Daten in einem strukturierten, maschinenlesbaren Format zu erhalten.</li>
         <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO): Sie können der Verarbeitung Ihrer Daten widersprechen.</li>
-    </ul>
+      </ul>
 
-    <h2>8. Kontakt und Beschwerderecht</h2>
-    <p>Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: <a href="mailto:app@sagenhaftlogo.de">app@sagenhaftlogo.de</a></p>
-    <p>Sie haben zudem das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.</p>
+      <h2>8. Kontakt und Beschwerderecht</h2>
+      <p>Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: <a href="mailto:app@sagenhaftlogo.de">app@sagenhaftlogo.de</a></p>
+      <p>Sie haben zudem das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.</p>
+
+    </article>
+  </section>
 </main>
+
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-8 w-full max-w-7xl mx-auto py-20 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+  <div class="w-full flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-sm font-medium text-slate-500 dark:text-slate-400">
+      © 2026 ZungenHeld. Effortless progress in speech therapy.
+    </div>
+    <div class="flex gap-6">
+      <a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors" href="index.html">Startseite</a>
+      <a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors" href="support.html">Support</a>
+      <a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors" href="mailto:app@sagenhaftlogo.de">Kontakt</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
