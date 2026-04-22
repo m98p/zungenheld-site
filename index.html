@@ -185,6 +185,15 @@
                             Individuelle Fortschrittsverfolgung für jedes Kind. Detaillierte Auswertungen für Eltern und Therapeuten.
                         </p>
 </div>
+<div class="flex flex-col gap-4">
+<div class="h-16 w-16 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary-container mb-2">
+<span class="material-symbols-outlined" style="font-size: 32px;">face_retouching_natural</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background" style="">AR Accessoires <span class="text-primary-container">erspielbar</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md" style="">
+                            Für jede erreichte Challenge schaltest du neue AR-Accessoires frei — Hörner, Brillen, Masken. So wird jede Zungenübung zum kleinen Belohnungs-Moment.
+                        </p>
+</div>
 </div>
 <!-- Sticky Mockup -->
 <div class="hidden md:block sticky top-32 h-[819px] flex items-center justify-center">
@@ -192,6 +201,7 @@
 <img class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" data-alt="Gameplay Image 1" id="feature-img-1" src="https://lh3.googleusercontent.com/aida/ADBb0uhtNjEg-JFIrW3IHyOupo-0zmCyxhwdV7qs1TS6Qb32ZtHBgMJVpQHQVwKNSQ-_WuW0uYWVmd7LDOjBG7o2EaGa7HMSN6BFfYIzBo99gUD_Jpz8YUB-dSPJzHDOUvkNrg6_iqqUg1A8ciRKgEcmhIuY2HIPNz3Rgz8SWeWHhYbGI13wPVXAT5tP9xdvPK40hZVslBUP7KWjNv7T8LfMSqoAcTiA-SVxUzhfAtqxRa8lRYeflIds_EZZ1BsZ2wqK41oBBStfBWld" style="">
 <img class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" data-alt="Gameplay Image 2" id="feature-img-2" src="https://lh3.googleusercontent.com/aida/ADBb0uhH-Zg1631Zz_2KeXH6CbkdDc5IKvO_FYbjLYOh6H2OM4v7Mvqbh4h61hG1zu3c2slCc-CfWp_voUKkNGUU2zALbfDhu-ENkD7gvLC8vcXMmVYJOtUZgmt-uk-DCsb1NS-QThjjChNX1dDeWuZhD4kGgH9iPq7kJ9goJxy2K-wf8BcQ0XIufim4ALIxTTTZASWUdAU5hPKxjXLM1tVEilkQpEZ0oWV8TPuuLl5qp4Qb_aYHfw6Vl98viVu_sBauf5pR6XDnxyheSg" style="">
 <img class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" data-alt="Gameplay Image 3" id="feature-img-3" src="https://lh3.googleusercontent.com/aida/ADBb0uipJ_pGf7N-mtKIafpgREmdoqWLFtL_Vbkus-gOgg-hlgIHnrHTd1qaAEfC0LkmBuVovQUHjwvqwZ9OU2nHaXz9XzNCjthZX8HV4f2oGic-Ab9gSUikR16e-B61OjufyXoc5bfeTDkQ-2WTKvyzspDc2wAdMhHmguLMD44kkBwUeYvZp_Ykqc00rp6JJUMkt_eKEzKem60FvDeckt4GtiS1mc1i8jpmaGBw8GROH8n-3480FE6eqskj6oYhmOMRmmOnfh0ZNItYcg" style="">
+<img class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" data-alt="AR Accessoires Screenshot mit Hörnern und Brille" id="feature-img-4" src="assets/ar-accessoires.png">
 </div>
 </div>
 </div>
@@ -280,24 +290,15 @@
         const rect = section.getBoundingClientRect();
         const progress = Math.max(0, Math.min(1, (window.innerHeight / 2 - rect.top) / rect.height));
         
-        const img1 = document.getElementById('feature-img-1');
-        const img2 = document.getElementById('feature-img-2');
-        const img3 = document.getElementById('feature-img-3');
-        
-        if (img1 && img2 && img3) {
-            if (progress < 0.33) {
-                img1.style.opacity = '1';
-                img2.style.opacity = '0';
-                img3.style.opacity = '0';
-            } else if (progress < 0.66) {
-                img1.style.opacity = '0';
-                img2.style.opacity = '1';
-                img3.style.opacity = '0';
-            } else {
-                img1.style.opacity = '0';
-                img2.style.opacity = '0';
-                img3.style.opacity = '1';
-            }
+        const imgs = [
+            document.getElementById('feature-img-1'),
+            document.getElementById('feature-img-2'),
+            document.getElementById('feature-img-3'),
+            document.getElementById('feature-img-4')
+        ];
+        if (imgs.every(Boolean)) {
+            const activeIdx = Math.min(imgs.length - 1, Math.floor(progress * imgs.length));
+            imgs.forEach((img, i) => { img.style.opacity = i === activeIdx ? '1' : '0'; });
         }
     });
 </script>
